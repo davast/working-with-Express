@@ -1,0 +1,25 @@
+{
+  "name": "working_with_express",
+  "version": "1.0.0",
+  "description": "practice",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "mongodb": "^4.3.1",
+    "mysql2": "^2.3.3",
+    "pug": "^3.0.2",
+    "sequelize": "^6.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
