@@ -4,7 +4,7 @@ const MongoClient = mongodb.MongoClient;
 let _db;
 
 const mongoConnect = (cb) => {
-  MongoClient.connect('mongodb+srv://davast:DAV_ast645830@cluster0.muw3f.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+  MongoClient.connect('mongodb+srv://davast:<PASSWORD>@cluster0.muw3f.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
   .then(client => {
     console.log('Connected');
     _db = client.db();
