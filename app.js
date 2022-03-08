@@ -36,7 +36,7 @@ app.use(errorController.get404);
 
 mongoose
   .connect(
-    "mongodb+srv://davast:DAV_ast645830@cluster0.muw3f.mongodb.net/Shop?retryWrites=true&w=majority"
+    "mongodb+srv://davast:<PASSWORD>@cluster0.muw3f.mongodb.net/Shop?retryWrites=true&w=majority"
   )
   .then((result) => {
     User.findOne().then((user) => {
