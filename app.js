@@ -55,7 +55,13 @@ app.use("/admin", adminRoutes);
 app.use(errorController.get404);
 
 mongoose
+<<<<<<< HEAD
   .connect(MONGODB_URI)
+=======
+  .connect(
+    "mongodb+srv://davast:<PASSWORD>@cluster0.muw3f.mongodb.net/Shop?retryWrites=true&w=majority"
+  )
+>>>>>>> 95a2c0b5588e1488ed5a3fb2f2df8d90f50b07be
   .then((result) => {
     User.findOne().then((user) => {
       if (!user) {
