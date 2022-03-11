@@ -9,7 +9,7 @@ const errorController = require("./controllers/error.js");
 const User = require("./models/user");
 
 const MONGODB_URI =
-  "mongodb+srv://davast:<PASSWORD>@cluster0.muw3f.mongodb.net/Shop?retryWrites=true&w=majority";
+  "mongodb+srv://davast:DAV_ast645830@cluster0.muw3f.mongodb.net/Shop?retryWrites=true&w=majority";
 
 const root = require("./helper/path.js");
 
@@ -60,19 +60,6 @@ app.use(errorController.get404);
 mongoose
   .connect(MONGODB_URI)
   .then((result) => {
-    User.findOne().then((user) => {
-      if (!user) {
-        const user = new User({
-          name: "David",
-          email: "davidastyan@gmail.com",
-          cart: {
-            items: [],
-          },
-        });
-        user.save();
-      }
-    });
-
     console.log("Connected");
     app.listen(3000);
   })
