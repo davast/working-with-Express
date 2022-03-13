@@ -10,7 +10,7 @@ const errorController = require("./controllers/error.js");
 const User = require("./models/user");
 
 const MONGODB_URI =
-  "mongodb+srv://davast:DAV_ast645830@cluster0.muw3f.mongodb.net/Shop?retryWrites=true&w=majority";
+  "mongodb+srv://davast:PASSWORD@cluster0.muw3f.mongodb.net/Shop?retryWrites=true&w=majority";
 
 const root = require("./helper/path.js");
 
