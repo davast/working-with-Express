@@ -5,12 +5,13 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 const csrf = require("csurf");
+const flash = require("connect-flash");
 
 const errorController = require("./controllers/error.js");
 const User = require("./models/user");
 
 const MONGODB_URI =
-  "mongodb+srv://davast:PASSWORD@cluster0.muw3f.mongodb.net/Shop?retryWrites=true&w=majority";
+  "mongodb+srv://davast:DAV_ast645830@cluster0.muw3f.mongodb.net/Shop?retryWrites=true&w=majority";
 
 const root = require("./helper/path.js");
 
@@ -40,6 +41,7 @@ app.use(
 );
 
 app.use(csrfProtection);
+app.use(flash());
 
 app.use((req, res, next) => {
   if (!req.session.user) {
